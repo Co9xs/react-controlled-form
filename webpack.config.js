@@ -1,3 +1,4 @@
+const path = require('path')
 module.exports = {
   mode: "development",
   entry: "./src/main.tsx",
@@ -17,4 +18,7 @@ module.exports = {
     extensions: [".ts", ".tsx", ".js", ".json"]
   },
   target: ["web", "es5"],
+  devServer: {
+    contentBase: path.join(__dirname, 'dist'),
+  },
 };
