@@ -11,6 +11,9 @@ export const ControlledInput: React.VFC<Props> = () => {
   return (
     <>
       <input onChange={handleChange} value={state.value}/>
+      { state.value.length > 3 && 
+        <p style={{margin: 0, color: 'red'}}>3文字以内にしてください</p>
+      }
       <p>{JSON.stringify(state)}</p>
     </>
   )
